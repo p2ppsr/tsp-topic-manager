@@ -1,8 +1,8 @@
 {
   "name": "tsp-topic-manager",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Manages a TSP Confederacy Topic",
-  "main": "index.js",
+  "main": "src/TSPTopicManager.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

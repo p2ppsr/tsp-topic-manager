@@ -24,7 +24,6 @@ class TSPTopicManager {
    * @param {Object} obj.parsedTransaction transaction containing outputs to admit into the current topic
    * @returns
    */
-  constructor (){ console.log("tsp-topic-mng")}
 
   identifyAdmissibleOutputs ({ parsedTransaction }) {
     try {

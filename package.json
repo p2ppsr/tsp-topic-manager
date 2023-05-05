@@ -18,6 +18,6 @@
   "homepage": "https://github.com/p2ppsr/tsp-topic-manager#readme",
   "dependencies": {
     "babbage-bsv": "^0.1.1",
-    "pushdrop": "^0.1.16"
+    "pushdrop": "^0.1.17"
   }
 }

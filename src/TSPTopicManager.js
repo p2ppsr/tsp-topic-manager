@@ -50,15 +50,12 @@ class TSPTopicManager {
             fieldFormat: 'buffer'
           })
 
-          if (result.fields[2].toString() !== TSP_PROTOCOL_ADDRESS) {
+          if (result.fields[1].toString() !== TSP_PROTOCOL_ADDRESS) {
             const e = new Error('This transaction is not a valid TSP token!')
             e.code = 'ERR_UNDEFINED_OUT'
             throw e
           }
-
-          //TODO
-          //validate fields 3,4, and 5 for SQLi
-
+          
           // Use ECDSA to verify signature
           const hasValidSignature = bsv.crypto.ECDSA.verify(
             bsv.crypto.Hash.sha256(Buffer.concat(result.fields)),

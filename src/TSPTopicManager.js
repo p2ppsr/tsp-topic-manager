@@ -76,7 +76,7 @@ class TSPTopicManager {
       }
       if (outputs.length === 0) {
         const e = new Error(
-          'This transaction does not publish a valid TSP Avertisment descriptor!'
+          'This transaction does not publish a valid TSP Advertisement descriptor!'
         )
         e.code = 'ERR_INVALID_ADVERTISEMENT'
         throw e

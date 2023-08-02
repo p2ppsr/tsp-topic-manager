@@ -18,6 +18,11 @@ Above 9=OP_DROP / OP_2DROP — Drop fields 2-8 from the stack.**/
 const TSP_PROTOCOL_ADDRESS = '1LQtKKK7c1TN3UcRfsp8SqGjWtzGskze36'
 
 class TSPTopicManager {
+
+  async getDocumentation() {
+    return 'test'
+  }
+
   /**
    * Returns the outputs from the TSP transaction that are admissible.
    * @param {Object} obj all params given in an object
@@ -25,10 +30,10 @@ class TSPTopicManager {
    * @returns
    */
 
-  identifyAdmissibleOutputs ({ parsedTransaction }) {
+  identifyAdmissibleOutputs({ parsedTransaction }) {
     try {
       const outputs = []
-      
+
       // Validate params
       if (!Array.isArray(parsedTransaction.inputs) || parsedTransaction.inputs.length < 1) {
         const e = new Error('An array of transaction inputs is required!')
@@ -55,7 +60,7 @@ class TSPTopicManager {
             e.code = 'ERR_UNDEFINED_OUT'
             throw e
           }
-          
+
           // Use ECDSA to verify signature
           const hasValidSignature = bsv.crypto.ECDSA.verify(
             bsv.crypto.Hash.sha256(Buffer.concat(result.fields)),

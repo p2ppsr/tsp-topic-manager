@@ -22,13 +22,8 @@ class TSPTopicManager {
 
   async getDocumentation() {
     //Source: melvingeorge.me
-    let readme = await fs.readFile('../README.md', (err, buff) => {
-      if (err) {
-        console.log('Unable to read file')
-        return
-      }
-      return buff.toString()
-    })
+    let raw = await fs.readFileSync('../README.md')
+    let readme = raw.toString()
     return readme
   }
 

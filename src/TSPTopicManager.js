@@ -1,6 +1,5 @@
 const bsv = require('babbage-bsv')
 const pushdrop = require('pushdrop')
-const fs = require('fs')
 
 /**Tempo Song Protocol fields
 0=<pubkey>
@@ -21,9 +20,14 @@ const TSP_PROTOCOL_ADDRESS = '1LQtKKK7c1TN3UcRfsp8SqGjWtzGskze36'
 class TSPTopicManager {
 
   async getDocumentation() {
-    //Source: melvingeorge.me
-    let raw = await fs.readFileSync('../README.md')
-    let readme = raw.toString()
+    let readme =
+      `# TSP Topic Manager
+
+      Nothing here yet!
+    
+      ## Manages TSP
+    
+      TSP is the Tempo Song Protocol`
     return readme
   }
 

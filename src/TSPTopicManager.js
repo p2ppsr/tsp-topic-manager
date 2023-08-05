@@ -21,13 +21,10 @@ class TSPTopicManager {
 
   async getDocumentation() {
     let readme =
-      `# TSP Topic Manager
-
-      Nothing here yet!
-    
-      ## Manages TSP
-    
-      TSP is the Tempo Song Protocol`
+      `# TSP Topic Manager\n` +
+      `Nothing here yet!\n` +
+      `## Manages TSP\n` +
+      `TSP is the Tempo Song Protocol\n`
     return readme
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "@cwi/tsp-topic-manager",
-  "version": "0.1.32",
+  "version": "0.1.33",
   "description": "Manages a TSP Confederacy Topic",
   "main": "src/TSPTopicManager.js",
   "scripts": {
